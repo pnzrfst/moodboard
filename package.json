@@ -1,16 +1,28 @@
 {
-  "name": "moodboard",
+  "name": "ts-moodboard",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple moodboard lib",
+  "main": "./dist/moodboard.js",
+  "types": "./dist/moodboard.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "panzerfaust",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
     "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnzrfst/moodboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pnzrfst/moodboard/issues"
   }
 }

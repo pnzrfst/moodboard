@@ -3,6 +3,9 @@ import { Moodboard } from "./moodboard.js";
 export class MoodBoardEl {
     private el: HTMLElement;
 
+    private savedX? : number;
+    private savedY? : number;
+
     private originalWidth: number = 0;
     private originalHeight: number = 0;
     private ready : Promise<void>;
@@ -10,7 +13,8 @@ export class MoodBoardEl {
     constructor(element: HTMLElement){
         this.el = element
         this.ready = this.initialize();
-        
+        this.savedX = this.savedX;
+        this.savedY = this.savedY;
     }
 
 
@@ -46,10 +50,12 @@ export class MoodBoardEl {
     }
 
     private getLeft(width: number, layout: Moodboard){
+        if(this.savedX) return this.savedX * layout.width;
         return Moodboard.randomNumber(0, layout.width - width);
     }
 
     private getTop(height: number, layout: Moodboard){
+        if(this.savedY) return this.savedY * layout.height;
         return Moodboard.randomNumber(0, layout.height - height);
     }
 
