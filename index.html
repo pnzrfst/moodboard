@@ -59,9 +59,9 @@
         import { Moodboard } from './dist/moodboard.js';
 
         const gallery = new Moodboard('.mood-item', {   
-            coverage: 0.2 ,      
-            variation: 0.2,     // Pequena variação de tamanho entre elas
-            resizeDelay: 200    // Reorganizar 200ms após o redimensionamento
+            coverage: 0.2 ,      // porcentagem de coverage das imagens
+            variation: 0.2,     // variação de tamanho das imagens
+            resizeDelay: 200    // delay para o redimensionamento das imagens
         });
 
         console.log(this.elements.lenght)
